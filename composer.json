@@ -1,0 +1,32 @@
+{
+    "name": "sven/super-basic-auth",
+    "description": "A lightweight package to add basic authentication to your Laravel app.",
+    "keywords": ["basic", "auth", "laravel", "http", "authentication", "user", "password"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sven Luijten",
+            "email": "svenluijten1995@gmail.com",
+            "homepage": "https://svenluijten.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sven\\SuperBasicAuth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sven\\SuperBasicAuth\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
