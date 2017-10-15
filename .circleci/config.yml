@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  test_7.1:
+  build:
     working_directory: ~/super-basic-auth
     docker:
       - image: circleci/php:7.1-cli
@@ -10,9 +10,3 @@ jobs:
       - run: sudo composer self-update --no-progress --no-interaction
       - run: composer install --no-progress --no-interaction --prefer-dist
       - run: ./vendor/bin/phpunit
-
-workflows:
-  version: 2
-  test:
-    jobs:
-      - test_7.1
