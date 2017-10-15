@@ -1,4 +1,4 @@
-![super-basic-auth](:hero)
+![super-basic-auth](https://user-images.githubusercontent.com/11269635/31586185-1bd6a6b2-b1ce-11e7-97a0-bae16ccb1266.jpg)
 
 # super-basic-auth
 
