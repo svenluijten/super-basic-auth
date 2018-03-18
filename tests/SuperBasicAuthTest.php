@@ -65,4 +65,20 @@ class SuperBasicAuthTest extends TestCase
             ->assertStatus(200)
             ->assertSee('admin');
     }
+
+    /** @test */
+    public function it_denies_entry_when_username_or_password_are_null()
+    {
+        app('config')->set('auth.basic.user', null);
+        app('config')->set('auth.basic.password', null);
+
+        $headers = [
+            'PHP_AUTH_USER' => null,
+            'PHP_AUTH_PW' => null,
+        ];
+
+        $this->get('/admin', $headers)
+            ->assertStatus(401)
+            ->assertHeader('WWW-Authenticate', 'Basic');
+    }
 }
