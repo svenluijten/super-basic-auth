@@ -18,7 +18,7 @@ class SuperBasicAuth
     public function handle($request, Closure $next)
     {
         if (
-            !$this->emptyCredentials($request) &&
+            ! $this->emptyCredentials($request) &&
             $request->getUser() === config('auth.basic.user') &&
             $request->getPassword() === config('auth.basic.password')
         ) {
