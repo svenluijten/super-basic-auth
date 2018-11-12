@@ -19,7 +19,7 @@ to your Laravel app. All you need is a webserver and a text editor!
 - [License](#license)
 
 ## Installation
-You'll have to follow a couple of simple steps to install this package.
+The installation instructions for this package can be found below.
 
 ### Downloading
 Via [composer](http://getcomposer.org):
@@ -29,12 +29,12 @@ $ composer require sven/super-basic-auth
 ```
 
 Or add the package to your dependencies in `composer.json` and run
-`composer update` on the command line to download the package:
+`composer update` on the command line to download it:
 
 ```json
 {
     "require": {
-        "sven/super-basic-auth": "^1.0"
+        "sven/super-basic-auth": "^2.0"
     }
 }
 ```
@@ -53,11 +53,10 @@ return [
 ];
 ```
 
-Be sure to add `AUTH_USERNAME` and `AUTH_PASSWORD` to your `.env` file. You can of course
-name these entries anything you want.
+Be sure to add `AUTH_USERNAME` and `AUTH_PASSWORD` to your `.env` file. You can
+call these entries whatever you want.
 
-Finally, apply the middleware to any route you want protected by that username and
-password combination:
+Finally, apply the middleware to any route you want protected by those credentials:
 
 ```php
 Route::group('admin', function () {
