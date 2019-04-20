@@ -4,18 +4,11 @@ namespace Sven\SuperBasicAuth;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class SuperBasicAuth
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Closure                 $next
-     *
-     * @return mixed
-     */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next): Response
     {
         if (
             ! $this->emptyCredentials($request) &&
@@ -30,11 +23,6 @@ class SuperBasicAuth
         ]);
     }
 
-    /**
-     * @param \Illuminate\Http\Request $request
-     *
-     * @return bool
-     */
     public function emptyCredentials(Request $request): bool
     {
         return $request->getUser() === null && $request->getPassword() === null;

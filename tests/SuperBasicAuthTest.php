@@ -9,7 +9,7 @@ class SuperBasicAuthTest extends TestCase
     /**
      * {@inheritdoc}
      */
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         parent::getEnvironmentSetUp($app);
 
@@ -26,14 +26,14 @@ class SuperBasicAuthTest extends TestCase
     }
 
     /** @test */
-    public function anyone_can_access_unprotected_routes()
+    public function anyone_can_access_unprotected_routes(): void
     {
         $this->get('/guest')
             ->assertStatus(200);
     }
 
     /** @test */
-    public function you_must_define_username_and_password()
+    public function you_must_define_username_and_password(): void
     {
         $this->get('/admin')
             ->assertStatus(401)
@@ -41,7 +41,7 @@ class SuperBasicAuthTest extends TestCase
     }
 
     /** @test */
-    public function it_denies_entry_after_wrong_username_or_password_are_given()
+    public function it_denies_entry_after_wrong_username_or_password_are_given(): void
     {
         $headers = [
             'PHP_AUTH_USER' => 'incorrect-username',
@@ -54,7 +54,7 @@ class SuperBasicAuthTest extends TestCase
     }
 
     /** @test */
-    public function it_authenticates_a_user_by_correct_username_and_password()
+    public function it_authenticates_a_user_by_correct_username_and_password(): void
     {
         $headers = [
             'PHP_AUTH_USER' => 'test-admin',
@@ -67,7 +67,7 @@ class SuperBasicAuthTest extends TestCase
     }
 
     /** @test */
-    public function it_denies_entry_when_username_or_password_are_null()
+    public function it_denies_entry_when_username_or_password_are_null(): void
     {
         app('config')->set('auth.basic.user', null);
         app('config')->set('auth.basic.password', null);
