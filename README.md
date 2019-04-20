@@ -34,7 +34,7 @@ Or add the package to your dependencies in `composer.json` and run
 ```json
 {
     "require": {
-        "sven/super-basic-auth": "^2.0"
+        "sven/super-basic-auth": "^2.1"
     }
 }
 ```
