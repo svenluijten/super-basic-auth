@@ -9,7 +9,7 @@ abstract class TestCase extends AbstractPackageTestCase
     /**
      * Set up the testing suite.
      */
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
     }
@@ -17,7 +17,7 @@ abstract class TestCase extends AbstractPackageTestCase
     /**
      * Tear down the testing suite.
      */
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
     }
