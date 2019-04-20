@@ -18,7 +18,7 @@ class SuperBasicAuth
             return $next($request);
         }
 
-        return response('Invalid credentials.', 401, [
+        abort(401, 'Invalid credentials.', [
             'WWW-Authenticate' => 'Basic',
         ]);
     }
