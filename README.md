@@ -5,7 +5,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-circleci]][link-circleci]
+[![Build Status][ico-build]][link-build]
 [![StyleCI][ico-styleci]][link-styleci]
 
 This is a super lightweight package to add the most basic form of authentication
@@ -76,10 +76,10 @@ though. See the [contributors page](../../graphs/contributors) for all contribut
 [ico-version]: https://img.shields.io/packagist/v/sven/super-basic-auth.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/sven/super-basic-auth.svg?style=flat-square
-[ico-circleci]: https://img.shields.io/circleci/project/github/svenluijten/super-basic-auth.svg?style=flat-square
+[ico-build]: https://img.shields.io/travis/svenluijten/super-basic-auth?style=flat-square
 [ico-styleci]: https://styleci.io/repos/107023626/shield
 
 [link-packagist]: https://packagist.org/packages/sven/super-basic-auth
 [link-downloads]: https://packagist.org/packages/sven/super-basic-auth
-[link-circleci]: https://circleci.com/gh/svenluijten/super-basic-auth
+[link-build]: https://travis-ci.org/svenluijten/super-basic-auth
 [link-styleci]: https://styleci.io/repos/107023626
