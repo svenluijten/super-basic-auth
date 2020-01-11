@@ -10,11 +10,7 @@ class SuperBasicAuth
 {
     public function handle(Request $request, Closure $next): Response
     {
-        if (
-            ! $this->emptyCredentials($request) &&
-            $request->getUser() === config('auth.basic.user') &&
-            $request->getPassword() === config('auth.basic.password')
-        ) {
+        if ($this->validate($request)) {
             return $next($request);
         }
 
@@ -23,8 +19,18 @@ class SuperBasicAuth
         ]);
     }
 
-    public function emptyCredentials(Request $request): bool
+    protected function validate(Request $request): bool
     {
-        return $request->getUser() === null && $request->getPassword() === null;
+        return $this->validUser($request->getUser()) && $this->validPassword($request->getPassword());
+    }
+
+    protected function validUser(?string $user): bool
+    {
+        return $user !== null && $user === config('auth.basic.user');
+    }
+
+    protected function validPassword(?string $password): bool
+    {
+        return $password !== null && $password === config('auth.basic.password');
     }
 }
