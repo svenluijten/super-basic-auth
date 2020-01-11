@@ -76,10 +76,10 @@ though. See the [contributors page](../../graphs/contributors) for all contribut
 [ico-version]: https://img.shields.io/packagist/v/sven/super-basic-auth.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/sven/super-basic-auth.svg?style=flat-square
-[ico-build]: https://img.shields.io/travis/svenluijten/super-basic-auth?style=flat-square
+[ico-build]: https://img.shields.io/github/workflow/status/svenluijten/super-basic-auth/run-tests?style=flat-square
 [ico-styleci]: https://styleci.io/repos/107023626/shield
 
 [link-packagist]: https://packagist.org/packages/sven/super-basic-auth
 [link-downloads]: https://packagist.org/packages/sven/super-basic-auth
-[link-build]: https://travis-ci.org/svenluijten/super-basic-auth
+[link-build]: https://github.com/svenluijten/super-basic-auth/actions?query=workflow%3ARun%20Tests
 [link-styleci]: https://styleci.io/repos/107023626

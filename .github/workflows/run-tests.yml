@@ -1,0 +1,31 @@
+name: Run Tests
+
+on: [push]
+
+jobs:
+    php-tests:
+        runs-on: ${{ matrix.os }}
+
+        strategy:
+            matrix:
+                os: [ubuntu-latest, windows-latest]
+                php: [7.1, 7.2, 7.3, 7.4]
+                dependency-version: [prefer-lowest, prefer-stable]
+
+        name: PHP ${{ matrix.os }} - ${{ matrix.dependency-version }} on ${{ matrix.os }}
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v1
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v1
+              with:
+                  php-version: ${{ matrix.php }}
+                  coverage: none
+
+            - name: Install dependencies
+              run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
+
+            - name: Execute tests
+              run: vendor/bin/phpunit
