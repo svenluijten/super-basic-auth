@@ -81,5 +81,5 @@ though. See the [contributors page](../../graphs/contributors) for all contribut
 
 [link-packagist]: https://packagist.org/packages/sven/super-basic-auth
 [link-downloads]: https://packagist.org/packages/sven/super-basic-auth
-[link-build]: https://github.com/svenluijten/super-basic-auth/actions?query=workflow%3ARun%20Tests
+[link-build]: https://github.com/svenluijten/super-basic-auth/actions?query=workflow%3A"Run+Tests"
 [link-styleci]: https://styleci.io/repos/107023626
