@@ -4,11 +4,10 @@ namespace Sven\SuperBasicAuth;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class SuperBasicAuth
 {
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
         if ($this->validate($request)) {
             return $next($request);
