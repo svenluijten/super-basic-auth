@@ -9,8 +9,8 @@ jobs:
         strategy:
             matrix:
                 os: [ubuntu-latest, windows-latest]
-                php: [7.1, 7.2, 7.3, 7.4]
-                dependency-version: [highest, lowest]
+                php: [7.4, 8.0]
+                dependency-version: [lowest, highest]
 
         name: PHP ${{ matrix.php }} - ${{ matrix.dependency-version }} on ${{ matrix.os }}
 
