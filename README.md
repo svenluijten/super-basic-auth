@@ -11,13 +11,6 @@
 This is a super lightweight package to add the most basic form of authentication
 to your Laravel app. All you need is a webserver and a text editor!
 
-## Index
-- [Installation](#installation)
-  - [Downloading](#downloading)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Installation
 The installation instructions for this package can be found below.
 
