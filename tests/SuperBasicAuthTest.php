@@ -2,6 +2,7 @@
 
 namespace Sven\SuperBasicAuth\Tests;
 
+use Orchestra\Testbench\TestCase;
 use Sven\SuperBasicAuth\SuperBasicAuth;
 
 class SuperBasicAuthTest extends TestCase
